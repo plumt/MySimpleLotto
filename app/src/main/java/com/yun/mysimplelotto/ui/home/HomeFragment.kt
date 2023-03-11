@@ -22,5 +22,13 @@ class HomeFragment : BaseFragment<FragmentHomeBinding, HomeViewModel>() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
+        viewModel.lottoIndex.observe(viewLifecycleOwner){
+            viewModel.callApi(requireContext())
+        }
+
+        viewModel.isLoading.observe(viewLifecycleOwner){
+            sharedViewModel.isLoading.value = it
+        }
+
     }
 }

@@ -22,8 +22,16 @@ class HomeFragment : BaseFragment<FragmentHomeBinding, HomeViewModel>() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
-        viewModel.lottoIndex.observe(viewLifecycleOwner){
-            viewModel.callApi(requireContext())
+        binding.btnSearch.setOnClickListener {
+            navigate(R.id.action_homeFragment_to_searchFragment)
+        }
+
+        viewModel.lottoIndex.observe(viewLifecycleOwner) {
+            if (it > 0) {
+                viewModel.callApi(requireContext())
+            } else {
+                viewModel.selectLastLotto()
+            }
         }
 
         viewModel.isLoading.observe(viewLifecycleOwner){

@@ -23,15 +23,16 @@ class LottoModel {
         override var id: Int,
         val returnValue: String,
         val drwNoDate: String?,
-        val drwtNo1: Double,
-        val drwtNo2: Double,
-        val drwtNo3: Double,
-        val drwtNo4: Double,
-        val drwtNo5: Double,
-        val drwtNo6: Double,
-        val bnusNo: Double,
-        val firstWinamnt: String,
-        val firstPrzwnerCo: Int,
-        val firstAccumamnt: String
+        val drwtNo1: Double?,
+        val drwtNo2: Double?,
+        val drwtNo3: Double?,
+        val drwtNo4: Double?,
+        val drwtNo5: Double?,
+        val drwtNo6: Double?,
+        val bnusNo: Double?,
+        val firstWinamnt: String?,
+        val firstPrzwnerCo: Int?,
+        val firstAccumamnt: String?,
+        val drwNo: String
     ) : Item()
 }

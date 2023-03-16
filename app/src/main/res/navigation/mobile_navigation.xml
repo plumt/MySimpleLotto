@@ -12,11 +12,18 @@
         <action
             android:id="@+id/action_homeFragment_to_searchFragment"
             app:destination="@id/searchFragment" />
+        <action
+            android:id="@+id/action_homeFragment_to_bestNumberFragment"
+            app:destination="@id/bestNumberFragment" />
     </fragment>
     <fragment
         android:id="@+id/searchFragment"
         android:name="com.yun.mysimplelotto.ui.search.SearchFragment"
         android:label="SearchFragment" />
+    <fragment
+        android:id="@+id/bestNumberFragment"
+        android:name="com.yun.mysimplelotto.ui.best.BestNumberFragment"
+        android:label="BestNumberFragment" />
 
 
 </navigation>

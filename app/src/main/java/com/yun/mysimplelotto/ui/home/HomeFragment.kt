@@ -26,6 +26,10 @@ class HomeFragment : BaseFragment<FragmentHomeBinding, HomeViewModel>() {
             navigate(R.id.action_homeFragment_to_searchFragment)
         }
 
+        binding.btnBest.setOnClickListener {
+            navigate(R.id.action_homeFragment_to_bestNumberFragment)
+        }
+
         viewModel.lottoIndex.observe(viewLifecycleOwner) {
             if (it > 0) {
                 viewModel.callApi(requireContext())

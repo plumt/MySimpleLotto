@@ -112,6 +112,17 @@ class HomeViewModel @Inject constructor(
             firstWinamnt = lottoModel.firstWinamnt!!,
             firstPrzwnerCo = lottoModel.firstPrzwnerCo.toString(),
             firstAccumamnt = lottoModel.firstAccumamnt!!,
-            drwNo = lottoModel.drwNo
+            drwNo = lottoModel.drwNo,
+            drwtNo = sorted(lottoModel.drwtNo1!!,lottoModel.drwtNo2!!,lottoModel.drwtNo3!!,lottoModel.drwtNo4!!,lottoModel.drwtNo5!!,lottoModel.drwtNo6!!)
         )
+
+    private fun sorted(vararg numbers: Double) : String{
+        val sort = numbers.sorted()
+        var result = ""
+        sort.forEachIndexed { index, d ->
+            if(index != 0) result += ","
+            result += "${d.toInt()}"
+        }
+        return result
+    }
 }

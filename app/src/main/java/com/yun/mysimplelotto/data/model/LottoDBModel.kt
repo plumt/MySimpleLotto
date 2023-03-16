@@ -20,4 +20,5 @@ class LottoDBModel (
     @ColumnInfo(name = "firstPrzwnerCo") val firstPrzwnerCo: String,
     @ColumnInfo(name = "firstAccumamnt") val firstAccumamnt: String,
     @ColumnInfo(name = "drwNo") val drwNo: String,
+    @ColumnInfo(name = "drwtNo") val drwtNo: String
 )
